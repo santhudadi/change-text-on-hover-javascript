@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Change Text on hover</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            h3{
+                color:red;
+            }
+            #text-display {
+                width :50%;
+                border: 1px solid green;
+                padding:15px;
+            }
+        </style>
+    </head>
+    <body>
+       <h3>1) Change paragraph text in below two cases:</h3>
+          <p>a) When mouse is moved on the paragraph</p> 
+          <p>b) When mouse is moved out of the paragraph</p><br>
+         <div id="text-display"><p id="text">I am a default text</p></div>
+        <script type="text/javascript">
+            const text = document.getElementById("text");
+            text.onmouseover = function () {
+            text.innerHTML = "I am a chnaged text because  you hovered on me";
+            };
+            text.onmouseout = function () {
+            text.innerHTML = "I am a default text";
+            title.innerHTML = "";
+            };
+
+        </script>
+    </body>
+</html>
